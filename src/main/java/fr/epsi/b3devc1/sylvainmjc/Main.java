@@ -11,7 +11,7 @@ public class Main {
             EntityManager em = emf.createEntityManager()) {
             em.getTransaction().begin();
 
-            //Livre livre = new Livre("Harry Potter et e prisonier d'Azkaban", "J.K. Rowling");
+            //Livre livre = new Livre("Harry Potter et le prisonnier d'Azkaban", "J.K. Rowling");
 
             Livre livre = em.find(Livre.class, 1);
             if(livre != null) {
