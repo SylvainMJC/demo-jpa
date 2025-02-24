@@ -3,6 +3,7 @@ package fr.epsi.b3devc1.sylvainmjc.bo;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table(name = "livre")
@@ -13,6 +14,10 @@ public class Livre implements Serializable {
     private Integer id;
     private String titre;
     private String auteur;
+
+
+    @ManyToMany(mappedBy = "livres")
+    private Set<Emprunt> emprunts;
 
     public Livre() {
     }
