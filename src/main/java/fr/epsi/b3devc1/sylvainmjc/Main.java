@@ -53,24 +53,28 @@ public class Main {
 
             // TP 3 : Réaliser une requête qui permet d’extraire un emprunt en fonction son id.
             Emprunt emprunt = em.find(Emprunt.class, 1);
-            System.out.println("emprunt");
-            System.out.println(emprunt);
+            if(emprunt != null) {
+                System.out.println("emprunt");
+                System.out.println(emprunt);
 
-            //o Affichez tous les livres associés
-            System.out.println("emprunt.getLivres()");
-            System.out.println(emprunt.getLivres());
-            System.out.println("for (Livre livre : emprunt.getLivres())");
-            for (Livre livre : emprunt.getLivres()) {
-                System.out.println(livre);
+                //o Affichez tous les livres associés
+                System.out.println("emprunt.getLivres()");
+                System.out.println(emprunt.getLivres());
+                System.out.println("for (Livre livre : emprunt.getLivres())");
+                for (Livre livre : emprunt.getLivres()) {
+                    System.out.println(livre);
+                }
             }
 
             //• Réaliser une requête qui permet d’extraire tous les emprunts d’un client donné
             Client  client = em.find(Client.class, 1);
-            System.out.println("client.getEmprunts()");
-            System.out.println(client.getEmprunts());
-            System.out.println("for (Emprunt emprunt2 : client.getEmprunts())");
-            for (Emprunt emprunt2 : client.getEmprunts()) {
-                System.out.println(emprunt2);
+            if(client != null) {
+                System.out.println("client.getEmprunts()");
+                System.out.println(client.getEmprunts());
+                System.out.println("for (Emprunt emprunt2 : client.getEmprunts())");
+                for (Emprunt emprunt2 : client.getEmprunts()) {
+                    System.out.println(emprunt2);
+                }
             }
 
 
